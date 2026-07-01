@@ -1,0 +1,35 @@
+# ============================================================
+# College Placement & Interview Prep Assistant — requirements.txt
+# Covers: Day 1-2 (dataset gen, local) + Day 3-8 (training, Colab GPU)
+#         + Day 9 (Gradio demo + eval)
+# ============================================================
+
+# --- Day 1-2: Dataset generation & cleaning (runs locally, CPU only) ---
+openai>=1.30.0
+pandas>=2.0.0
+tqdm>=4.66.0
+
+# --- Day 3-8: Model training (Colab T4 GPU only, install there) ---
+# NOTE: install unsloth via its git URL in Colab as shown in the roadmap:
+# !pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git" -q
+torch>=2.2.0
+transformers>=4.42.0
+trl>=0.9.4
+peft>=0.11.0
+accelerate>=0.31.0
+bitsandbytes>=0.43.0
+datasets>=2.19.0
+sentencepiece>=0.2.0
+protobuf>=4.25.0
+einops>=0.8.0
+
+# --- Day 9: Gradio UI + LLM-as-a-judge eval ---
+gradio>=4.31.0
+
+# --- General utilities used across notebooks ---
+numpy>=1.26.0
+scikit-learn>=1.4.0
+matplotlib>=3.8.0
+
+
+python-dotenv
