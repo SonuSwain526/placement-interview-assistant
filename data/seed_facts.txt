@@ -1,0 +1,185 @@
+========================================================================
+SEED FACTS — College Placement & Interview Prep Assistant
+Last verified: July 2026 | Sources: company interview reports, TCS
+official eligibility docs, IGotAnOffer, Exponent, Prepfully (2026 guides)
+========================================================================
+Purpose: These facts anchor every GPT-4o generation prompt (Stage 1
+corpus, Stage 2 SFT pairs, Stage 3 ORPO pairs) so the model learns
+SPECIFIC, VERIFIABLE claims instead of generic filler advice.
+
+Note on volatility: interview round counts, CGPA cutoffs, and exam
+patterns change most years. Facts marked [STABLE] are structural and
+unlikely to change; facts marked [VARIES] should be spot-checked again
+closer to your actual placement season / your specific campus.
+
+------------------------------------------------------------------------
+1. COMPANY INTERVIEW ROUND STRUCTURES
+------------------------------------------------------------------------
+
+1.1 Amazon SDE-1 (India campus) [VARIES — round count fluctuates 3-5]
+    - Typical loop: 1 Online Assessment (2 DSA problems + work-style/
+      behavioral simulation, ~70-90 min) → 1-2 technical coding rounds
+      → 1 Bar Raiser round.
+    - Bar Raiser: conducted by a senior interviewer from a DIFFERENT
+      team, with veto power over the hire. Evaluates the candidate
+      against Amazon's 16 Leadership Principles (e.g., Customer
+      Obsession, Ownership, Dive Deep, Earn Trust) using STAR-format
+      behavioral questions, sometimes mixed with an additional coding
+      question. Round length: 45-60 minutes.
+    - Full process (application to offer) can take anywhere from 3
+      weeks to several months depending on role and panel availability.
+
+1.2 Google SWE University Grad / L3 (India campus) [STABLE structure]
+    - Loop: 1 online coding assessment → 2 DSA/coding interviews →
+      1 "Googleyness & Leadership" behavioral round → (system design
+      generally NOT part of the L3 new-grad loop; it starts at L4).
+    - Googleyness round: 45 minutes, STAR-format, evaluates comfort
+      with ambiguity, collaboration, and learning mindset — Google's
+      answer to "culture fit," deliberately less rigid than Amazon's
+      Leadership Principles.
+    - After the loop, a Hiring Committee (not the interviewers)
+      reviews the full packet and scores across 4 dimensions: General
+      Cognitive Ability, Role-Related Knowledge, Leadership, and
+      Googleyness. This review typically takes 1-2+ weeks.
+    - Team matching now happens before the Hiring Committee review.
+
+1.3 Microsoft SDE-1 (India campus) [VARIES]
+    - Typical loop: Online coding round → 2 technical interviews
+      (DSA + CS fundamentals) → 1 "As Appropriate" (AA) round with a
+      senior engineer, which can include behavioral + technical depth
+      and sometimes has informal veto-like weight similar to a
+      Bar Raiser.
+
+1.4 Flipkart SDE-1 [VARIES]
+    - Typical loop: Online assessment → 2 DSA-focused technical
+      rounds → 1 Hiring Manager (HM) round covering project depth and
+      behavioral fit.
+
+1.5 Infosys (InfyTQ / off-campus) [STABLE]
+    - Path: InfyTQ certification test (Python or Java) → Technical
+      interview → HR interview.
+    - Infosys HR rounds are known to filter out otherwise technically
+      qualified candidates on communication clarity — treat it as a
+      real evaluation, not a formality.
+
+------------------------------------------------------------------------
+2. ELIGIBILITY / CGPA CUTOFFS
+------------------------------------------------------------------------
+[VARIES — service companies publish official cutoffs; product
+companies mostly do NOT. Numbers below are the commonly reported
+range, not official policy, except where marked OFFICIAL.]
+
+2.1 TCS — OFFICIAL, verified against TCS's published eligibility
+    doc: minimum 60% aggregate (≈6.0 CGPA on a ×10 scale) across 10th,
+    12th, and graduation, with a maximum of 1 active backlog at the
+    time of the selection process (must be zero at joining).
+
+2.2 Infosys, Wipro, Cognizant, Capgemini, HCL, LTIMindtree: commonly
+    require the same 60% / 6.0 CGPA threshold across 10th/12th/
+    graduation as TCS.
+
+2.3 Amazon, Microsoft: do not publish an official CGPA cutoff for
+    India campus hiring. Commonly cited informal floors are around
+    6.0-6.5 CGPA, but average SELECTED candidates tend to sit in the
+    7.5-8.5 range. Product companies weight DSA/coding performance
+    far more heavily than CGPA.
+
+2.4 Google: has stated it has no hard CGPA cutoff globally. In
+    practice, campus resume shortlists at top-tier colleges skew
+    toward 7.5+, but strong DSA candidates below that have gotten
+    through — CGPA is a soft signal, not a gate, at Google.
+
+2.5 Flipkart and similar product/unicorn companies: informally cited
+    around 6.5 CGPA where a threshold exists at all.
+
+2.6 Important nuance for the assistant to convey: CGPA×10 formula
+    differs by university (e.g., Anna University/VIT/SRM/current-
+    scheme VTU use CGPA×10 directly; AKTU/SPPU/older-scheme VTU use
+    (CGPA−0.75)×10). A student should convert using their own
+    university's formula before assuming eligibility — don't state a
+    single CGPA number as universally equivalent to a percentage.
+
+------------------------------------------------------------------------
+3. APTITUDE / ONLINE TEST PATTERNS
+------------------------------------------------------------------------
+
+3.1 TCS NQT (National Qualifier Test) — 2026 integrated format
+    [VARIES year to year, verify each season]
+    - Total: ~190 minutes, two mandatory parts, ~82-92 questions
+      depending on source.
+    - Foundation section (~75 min, ~65 Qs): Numerical Ability, Verbal
+      Ability, Reasoning Ability — determines Ninja-band eligibility.
+    - Advanced section (~115 min): Advanced Aptitude (~15 Qs, 25 min)
+      + Advanced Coding (2 problems, 90 min) — determines Digital/
+      Prime-band eligibility.
+    - NO negative marking anywhere in the test (confirmed for 2026).
+    - Question locking: once you move to the next question you cannot
+      go back; switching browser tabs ends the exam immediately.
+    - Highest eligible band (Ninja / Digital / Prime) is offered
+      automatically based on percentile performance — you don't apply
+      to a specific band separately.
+
+3.2 Infosys InfyTQ: certification test in Python or Java → clearing it
+    is the gateway to the technical interview, then HR.
+
+3.3 Wipro NLTH (National Level Talent Hunt): Aptitude + English +
+    Online Technical Test + Coding round, broadly similar structure to
+    TCS NQT but company-specific weighting.
+
+------------------------------------------------------------------------
+4. DSA PRIORITY LIST (for product-based company interviews)
+------------------------------------------------------------------------
+[STABLE — reflects consistent patterns across recent interview
+reports]
+
+Must-know (near-certain to appear): Arrays, Strings, Linked Lists,
+Binary Search, Recursion.
+
+High-priority: Dynamic Programming (1D/2D, knapsack variants), Trees
+(BST operations, LCA, traversals), Graphs (BFS/DFS, shortest paths),
+Sliding Window, Two Pointers.
+
+System design basics needed even at SDE-1/L3 level (more likely to
+surface as a discussion within a coding round than as a dedicated
+round for true freshers): Load Balancers, CDN, Caching (Redis), SQL
+vs NoSQL, Horizontal vs Vertical scaling. Note: for Google L3
+specifically, a DEDICATED system design round is generally NOT part
+of the new-grad loop — don't over-index prep time here for Google
+freshers specifically; it matters more for Amazon/Microsoft/Flipkart
+SDE-1 and starts becoming a real Google round at L4.
+
+------------------------------------------------------------------------
+5. RESUME RULES (for freshers)
+------------------------------------------------------------------------
+[STABLE — general industry consensus]
+
+- 1 page maximum, reverse-chronological order.
+- Action verb + metric format: not "worked on API performance" but
+  "Reduced API response time by 35% by implementing Redis caching."
+- Section order: Education → Technical Skills → Projects →
+  Internships → Achievements.
+- Avoid generic self-descriptors like "hard-working" or "team player"
+  as skills — list actual technologies, tools, and frameworks instead.
+- Triple-check dates and project timelines; interviewers do catch and
+  probe inconsistencies.
+
+------------------------------------------------------------------------
+6. PLACEMENT PROCESS CONCEPTS
+------------------------------------------------------------------------
+[STABLE]
+
+- PPO (Pre-Placement Offer): a full-time offer extended at the end of
+  an internship, before the main campus season. Counts as a confirmed
+  placement — the student generally skips the regular process for
+  that company. Strong, measurable internship outcomes plus visible
+  manager feedback are the main levers for earning one.
+- Campus recruitment season: roughly August-December for Tier-1
+  companies, November-March for Tier-2/3 and mass recruiters — exact
+  windows shift year to year and by college, so treat this as a
+  rough seasonal pattern, not a fixed calendar.
+- Mock interview slots are commonly opened by placement cells in the
+  1-2 weeks before a company's scheduled campus visit.
+
+========================================================================
+END OF SEED FACTS
+========================================================================
